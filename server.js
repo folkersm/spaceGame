@@ -35,9 +35,21 @@ const templateNewBaord = new Array(boardSize).fill(null).map(() => new Array(boa
 
 xmax = {b:'d',c:'e',d:'f'}
 
-function transform_coordinates(x,y,piece) {
-if (abs(i-j)=boardSize-1){ 
+function transform_coordinates(x,y) {
+if (x=-1&&y=boardSize){ 
+	x=0
+	y=boardSize-1
+}
+if (x=boardSize&&y=-1) {
 	
+}
+if ((x+y)>boardSize*2-2){ 
+	x=0
+	y=0
+}
+if (x+y==-2){ 
+	x = boardSize
+	y=boardSize
 }
 	if (x==boardSize) {
 		x=y;
@@ -59,9 +71,6 @@ if (abs(i-j)=boardSize-1){
 	return x,y
 }
 
-function direction_transformation(letter) {
-	
-}
 
 
 function update_board() {
